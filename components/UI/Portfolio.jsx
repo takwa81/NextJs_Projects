@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Container, Col, Row } from "reactstrap";
 import SubTitle from "./SubTitle";
-import portfolioData from '../data/portfolio';
 import PortfolioItem from "./PortfolioItem";
 import styles from '../../styles/Portfolio.module.scss';
 import { PortfolioData } from "../../pages/api/data";
@@ -10,6 +9,7 @@ import Button from "./Button";
 
 const Portfolio = () => {
     const { portfolio } = PortfolioData();
+    const {loading} = PortfolioData();
 
     const [data, setData] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState();
@@ -45,7 +45,10 @@ const Portfolio = () => {
                         <h4 className="mt-4">Some of my works</h4>
                     </Col>
 
-                    <Col lg="6" md="6">
+                    {
+                        loading ? <SubTitle subtitle="Loading ....."/>:
+                        <>
+                        <Col lg="6" md="6">
                         <div className={`${styles.tab_btns} text-end`}>
                            
 
@@ -64,6 +67,8 @@ const Portfolio = () => {
                             <PortfolioItem item={item} />
                         </Col>
                     ))}
+                        </>
+                    }
                 </Row>
             </Container>
         </section>
