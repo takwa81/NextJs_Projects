@@ -59,20 +59,24 @@ footer {
 	padding: 7px 20px !important;
 	border: 1px solid$secondary !important;
 	border-radius: 5px;
-	a {
-		text-decoration: none;
-		color:$secondary;
-		background: transparent !important;
-		&:hover {
-			color:$secondary;
-		}
-	}
+	color:$secondary;
+	background: transparent !important;
+	// a {
+	// 	text-decoration: none;
+	// 	color:$secondary;
+	// 	background: transparent !important;
+	// 	&:hover {
+	// 		color:$secondary;
+	// 	}
+	// }
 }
 .secondary_btn {
 	background: transparent !important;
 	border: none;
 	outline: none;
 	padding: 7px 25px;
+	color:$secondary;
+	background: transparent !important;
 	a {
 		color:$secondary;
 		&:hover {

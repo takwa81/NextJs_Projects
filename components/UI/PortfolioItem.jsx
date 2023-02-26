@@ -5,7 +5,7 @@ import Link from "next/link";
 import Button from "./Button";
 
 const PortfolioItem = (props) => {
-  const { title, img, keyword } = props.item;
+  const { title, image } = props.item;
   return (
     <div className={`${styles.portfolio_item}`}>
       <div className="bg-transparent">
@@ -13,7 +13,7 @@ const PortfolioItem = (props) => {
       </div>
 
       <div className={`${styles.portfolio_img}`}>
-        <Image alt="portfolio-img" src={img} width="315" height="250" />
+        <Image alt="portfolio-img" src={image} width="315" height="250" />
       </div>
 
       <div className={`${styles.portfolio_live} bg-transparent`}>

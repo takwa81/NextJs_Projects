@@ -1,31 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Container, Col, Row } from "reactstrap";
 import SubTitle from "./SubTitle";
 import portfolioData from '../data/portfolio';
 import PortfolioItem from "./PortfolioItem";
 import styles from '../../styles/Portfolio.module.scss';
-const Portfolio = () => {
+import { PortfolioData } from "../../pages/api/data";
+import Button from "./Button";
 
-    const [filter, setFilter] = useState("Web App");
-    const [data, setData] = useState();
+
+const Portfolio = () => {
+    const { portfolio } = PortfolioData();
+
+    const [data, setData] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState();
 
     useEffect(() => {
-        if (filter === "Web App") {
-            const filteredData = portfolioData.filter(
-                (item) => item.category === filter
-            );
+        setData(portfolio);
+    }, []);
 
-            setData(filteredData);
+    function getFiltered() {
+        if (!selectedCategory) {
+            return data;
         }
+        return data.filter((item) => item.category === selectedCategory);
+    }
 
-        if (filter === "Web Design") {
-            const filteredData = portfolioData.filter(
-                (item) => item.category === filter
-            );
+    // avoid duplicate
+    var filteredList = useMemo(getFiltered, [selectedCategory, data]);
 
-            setData(filteredData);
-        }
-    }, [filter]);
+
+    // Categories 
+    const categories = data.map(i => i.category);
+    const categoryFilter = data.filter(({ category }, index) => !categories.includes(category , index + 1))
+    
 
     const active = `${styles.tab_btn_active}`;
 
@@ -40,24 +47,19 @@ const Portfolio = () => {
 
                     <Col lg="6" md="6">
                         <div className={`${styles.tab_btns} text-end`}>
-                            <button
-                                className={` ${filter === "Web App" ? active : ""
-                                    } secondary_btn text-white`}
-                                onClick={() => setFilter("Web App")}
-                            >
-                                Web App
-                            </button>
-                            <button
-                                className={`${filter === "Web Design" ? active : ""
-                                    } secondary_btn text-white`}
-                                onClick={() => setFilter("Web Design")}
-                            >
-                                Web Design
-                            </button>
+                           
+
+                            {categoryFilter?.map((item , index) => (
+                               
+                                <Button style={` ${selectedCategory === item.category ? active : ""} secondary_btn text-white`}
+                                text={item.category} 
+                                data={() => setSelectedCategory(item.category)} />
+                            ))}
+
                         </div>
                     </Col>
 
-                    {data?.map((item) => (
+                    {filteredList?.map((item) => (
                         <Col lg="4" md="4" sm="6" key={item.id}>
                             <PortfolioItem item={item} />
                         </Col>
