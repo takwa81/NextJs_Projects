@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
-import styles from '../../styles/Services.module.css';
+import styles from '../../styles/Services.module.scss';
 import SubTitle from "./SubTitle";
 import ServiceItem from "./ServiceItem";
 

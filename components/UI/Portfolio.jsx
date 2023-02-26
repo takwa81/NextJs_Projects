@@ -3,7 +3,7 @@ import { Container, Col, Row } from "reactstrap";
 import SubTitle from "./SubTitle";
 import portfolioData from '../data/portfolio';
 import PortfolioItem from "./PortfolioItem";
-import styles from '../../styles/Portfolio.module.css';
+import styles from '../../styles/Portfolio.module.scss';
 const Portfolio = () => {
 
     const [filter, setFilter] = useState("Web App");

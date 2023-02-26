@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Form.module.css";
+import styles from "../../styles/Form.module.scss";
 
 const Form = () => {
   const submitHandler = () => {

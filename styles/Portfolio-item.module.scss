@@ -1,0 +1,41 @@
+
+@import 'variables';
+
+  .portfolio_item {
+    background: $card-01;
+    padding: 0px 20px 20px 20px;
+    padding-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    h6 {
+      color: $secondary;
+      margin-bottom: 20px;
+      background: transparent;
+    }
+    &:hover {
+      .portfolio_live {
+        margin-left: 0;
+        display: block;
+      }
+    }
+  }
+  .portfolio_img {
+    margin-top: 30px;
+    background: transparent;
+    img {
+      border-radius: 10px;
+    }
+  }
+  .portfolio_live {
+    margin-left: -100px;
+    margin-top: 30px;
+    display: none;
+  }
+  @media only screen and (max-width: 576px) {
+    .portfolio_img {
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+  

@@ -1,0 +1,114 @@
+@import "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap";
+@import "variables";
+
+
+
+html {
+	padding: 0;
+	margin: 0;
+	font-family: 'Quicksand', sans-serif;
+	scroll-behavior: smooth;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Quicksand', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	color: unset;
+	text-decoration: none;
+}
+* {
+	box-sizing: border-box;
+	background: $primary;
+}
+p {
+	color: $text-color;
+	line-height: 30px;
+}
+h1 {
+	color: #fff;
+}
+h2 {
+	color: #fff;
+	font-size: 2.5rem !important;
+}
+h3 {
+	color: #fff;
+}
+h4 {
+	color: #fff;
+}
+h5 {
+	color: #fff;
+}
+h6 {
+	color: #fff;
+}
+section {
+	padding-top: 150px;
+}
+footer {
+	padding-bottom: 20px;
+	padding-top: 60px;
+	border-top: 1px solid $card-01;
+}
+.primary_btn {
+	background: $card-01 !important;
+	padding: 7px 20px !important;
+	border: 1px solid$secondary !important;
+	border-radius: 5px;
+	a {
+		text-decoration: none;
+		color:$secondary;
+		background: transparent !important;
+		&:hover {
+			color:$secondary;
+		}
+	}
+}
+.secondary_btn {
+	background: transparent !important;
+	border: none;
+	outline: none;
+	padding: 7px 25px;
+	a {
+		color:$secondary;
+		&:hover {
+			color:$secondary;
+		}
+	}
+}
+::-webkit-scrollbar {
+	width: 10px;
+	background: $text-color;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 2em;
+	background: $card-01;
+}
+@media only screen and (max-width: 992px) {
+	p {
+		font-size: 0.9rem !important;
+	}
+	.primary_btn {
+		a {
+			font-size: 0.9rem;
+		}
+	}
+	.secondary_btn {
+		a {
+			font-size: 0.9rem;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	section {
+		padding-top: 110px;
+	}
+	footer {
+		padding-top: 0;
+		border: none;
+	}
+}

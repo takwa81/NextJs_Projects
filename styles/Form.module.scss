@@ -1,0 +1,37 @@
+@import 'variables' ;
+
+.form_group {
+	input {
+		width: 100%;
+		border: none;
+		outline: none;
+		background: $card-01;
+		color: #fff;
+		padding: 15px 20px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		&::placeholder {
+			font-size: 0.8rem;
+			color: $text-color;
+		}
+	}
+	textarea {
+		width: 100%;
+		border: none;
+		outline: none;
+		background: $card-01;
+		color: #fff;
+		padding: 15px 20px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		&::placeholder {
+			font-size: 0.8rem;
+			color: $text-color;
+		}
+	}
+}
+.form {
+	button {
+		color: $secondary;
+	}
+}

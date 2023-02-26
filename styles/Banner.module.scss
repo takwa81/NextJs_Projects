@@ -1,0 +1,137 @@
+@import 'variables';
+
+
+.banner {
+	padding-top: 60px !important;
+}
+.banner_content {
+	h5 {
+		color: $text-color;
+		font-weight: 400;
+	}
+}
+.banner_img {
+	position: relative;
+	z-index: 9;
+	img {
+		border-radius: 50px 5px 5px 5px;
+	}
+}
+.banner_skills {
+	text-align: left;
+	width: 130px;
+	padding: 10px 20px;
+	position: absolute;
+	top: 50%;
+	left: 9%;
+	transform: translateY(-50%);
+	border-radius: 5px;
+	background: #808dad26;
+	z-index: 10;
+	h6 {
+		background: transparent;
+		color: #fff;
+	}
+	span {
+		i {
+			color: $secondary;
+			background: transparent;
+		}
+		background: transparent;
+	}
+}
+.banner_experience {
+	width: 150px;
+	position: absolute;
+	bottom: -10%;
+	right: 5%;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background: #808dad26;
+	z-index: 10;
+	span {
+		background: transparent !important;
+		i {
+			padding: 5px;
+			color: $secondary;
+			background: $text-color;
+			border-radius: 5px;
+		}
+	}
+	h5 {
+		background: transparent !important;
+	}
+	h6 {
+		background: transparent !important;
+		margin-bottom: 5px;
+		font-weight: 400;
+		font-size: 0.8rem;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.banner_content {
+		h2 {
+			font-size: 1.5rem !important;
+		}
+		h5 {
+			font-size: 1.1rem !important;
+		}
+		padding-top: 0;
+	}
+	.banner_img {
+		img {
+			width: 250px !important;
+			height: 250px !important;
+		}
+	}
+	.banner_skills {
+		padding: 10px;
+		width: 90px;
+		left: 5%;
+		h6 {
+			font-size: 0.7rem;
+			margin-bottom: 0;
+		}
+		span {
+			i {
+				font-size: 0.7rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.banner_experience {
+		padding: 10px;
+		width: 115px;
+		h6 {
+			font-size: 0.7rem;
+		}
+		h5 {
+			font-size: 0.9rem;
+		}
+		span {
+			i {
+				font-size: 0.8rem;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.banner_img {
+		text-align: center !important;
+		margin-top: 50px;
+	}
+	.banner_skills {
+		left: 15%;
+	}
+	.banner_experience {
+		right: 20%;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.banner_skills {
+		display: none;
+	}
+	.banner_experience {
+		display: none !important;
+	}
+}

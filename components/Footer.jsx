@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../styles/Footer.module.css';
+import styles from '../styles/Footer.module.scss';
 import Link from "next/link";
 import { Col, Container, Row } from "reactstrap";
 

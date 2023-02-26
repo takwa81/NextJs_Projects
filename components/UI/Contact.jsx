@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import SubTitle from "./SubTitle";
-import styles from '../../styles/Contact.module.css'
+import styles from '../../styles/Contact.module.scss'
 import Link from "next/link";
 import Form from "./Form";
 

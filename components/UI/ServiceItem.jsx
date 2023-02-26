@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../../styles/Service-item.module.css'
+import styles from '../../styles/Service-item.module.scss'
 
 const ServiceItem = ({title , icon}) =>{
     return(

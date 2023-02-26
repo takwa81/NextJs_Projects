@@ -4,7 +4,7 @@ import { Col, Container, Row } from "reactstrap";
 import Image from "next/image";
 import Link from "next/link";
 import BannerImage from '../../public/images/person.jpg';
-import styles from '../../styles/Banner.module.css';
+import styles from '../../styles/Banner.module.scss';
 
 const Banner = () => {
     return (

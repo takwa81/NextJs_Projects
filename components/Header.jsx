@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Container } from "reactstrap";
 import Link from "next/link";
-import styles from '../styles/Header.module.css';
+import styles from '../styles/Header.module.scss';
 
 
 const nav_link = [

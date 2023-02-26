@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Portfolio-item.module.css";
+import styles from "../../styles/Portfolio-item.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
