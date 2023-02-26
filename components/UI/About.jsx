@@ -8,6 +8,7 @@ import img03 from "../../public/images/person.jpg";
 import img04 from "../../public/images/person.jpg";
 import { Col, Container, Row } from "reactstrap";
 import Image from "next/image";
+import Button from "./Button";
 
 
 const About = () =>{
@@ -61,46 +62,30 @@ const About = () =>{
                   </h6>
                 </div>
               </div>
-  
               <div className="mt-5">
-                <button className="primary_btn">
-                  <Link href="#portfolio">My Portfolio</Link>
-                </button>
-  
-                <button className="secondary_btn">
-                  <Link href="#">Download CV</Link>
-                </button>
+                <Button text="My Portfolio" destination="#portfolio" style="primary_btn" />
+                <Button style="secondary_btn" destination="#" text="Download Cv" />
               </div>
             </Col>
   
             <Col lg="6">
-              <div
-                className={`${styles.about_img_gallery} d-flex gap-4 justify-content-end`}
-              >
+              <div className={`${styles.about_img_gallery} d-flex gap-4 justify-content-end`}>
                 <div className=" d-flex flex-column mb-3">
-                  <div
-                    className={`${styles.about_img} ${styles.about_img_box}`}
-                  >
+                  <div className={`${styles.about_img} ${styles.about_img_box}`}>
                     <Image width="200" height="200" src={img01} alt="about-img" />
                   </div>
   
-                  <div
-                    className={`${styles.about_img} ${styles.about_img_box}`}
-                  >
+                  <div className={`${styles.about_img} ${styles.about_img_box}`}>
                     <Image width="200" height="200" src={img02} alt="about-img" />
                   </div>
                 </div>
   
                 <div className=" d-flex flex-column mb-3">
-                  <div
-                    className={`${styles.about_img} ${styles.about_img_box}`}
-                  >
+                  <div className={`${styles.about_img} ${styles.about_img_box}`}>
                     <Image width="200" height="200" src={img03} alt="about-img" />
                   </div>
   
-                  <div
-                    className={`${styles.about_img} ${styles.about_img_box}`}
-                  >
+                  <div className={`${styles.about_img} ${styles.about_img_box}`}>
                     <Image width="200" height="200" src={img04} alt="about-img" />
                   </div>
                 </div>

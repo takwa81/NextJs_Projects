@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BannerImage from '../../public/images/person.jpg';
 import styles from '../../styles/Banner.module.scss';
+import Button from "./Button";
 
 const Banner = () => {
     return (
@@ -19,8 +20,10 @@ const Banner = () => {
                             <h5 className="mb-4">FullStack Developer </h5>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel suscipit tenetur tempore hic itaque, odit ducimus quidem nostrum eaque quisquam libero maxime modi, magni ut obcaecati porro ea voluptatem adipisci!</p>
                             <div className="mt-5 mb-5">
-                                <button className="primary_btn"><Link href='#'>About Me</Link></button>
-                                <button className="secondary_btn"><Link href='#'>Download Cv</Link></button>
+                                {/* <button className="primary_btn"><Link href='#'>About Me</Link></button> */}
+                                {/* <button className="secondary_btn"><Link href='#'>Download Cv</Link></button> */}
+                            <Button style="primary_btn" text="About Me" destination="#"/>
+                            <Button style="secondary_btn" text="Download Cv" destination="#"/>
                             </div>
                         </div>
                     </Col>

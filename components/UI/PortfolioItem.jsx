@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/Portfolio-item.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 const PortfolioItem = (props) => {
   const { title, img, keyword } = props.item;
@@ -16,9 +17,7 @@ const PortfolioItem = (props) => {
       </div>
 
       <div className={`${styles.portfolio_live} bg-transparent`}>
-        <button className="primary_btn">
-          <Link href="#">More</Link>
-        </button>
+        <Button destination="#" style="primary_btn" text="Detail" />
       </div>
     </div>
   );
